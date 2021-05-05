@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.i:hover{
+  width: 400px;
+  height: 390px;
+}
+
+.image{
+ position: relative;
+ width: 200px;
+ height: 390px;
+ float: left;
+ margin-right: 10px;
+}
+
+/* Child Text Container */
+.image div{
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ background: white;
+ color: blue;
+ margin-bottom: 5px;
+ font-family: sans-serif;
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.image:hover{
+ cursor: pointer;
+}
+
+.image:hover div{
+ width: 150px;
+ padding: 8px 15px;
+ visibility: visible;
+ opacity: 0.9; 
+}
